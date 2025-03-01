@@ -1,5 +1,33 @@
+<div class="container-fluid">
+  <!-- Fila principal con Flexbox -->
+  <div class="row">
+    <!-- Navbar en la izquierda -->
+    <app-nav class="col-md-3"></app-nav>
 
-<app-nav></app-nav>
-<app-header></app-header>
-<app-dashboard ></app-dashboard>
-<app-footer></app-footer>
+    <!-- Separa las tarjetas en 2 columnas  -->
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-6">
+          <app-solicitudes></app-solicitudes>
+        </div>
+        <div class="col-md-6">
+          <app-reemplazos></app-reemplazos>
+        </div>
+      </div>
+    <!-- Segunda columna -->
+      <div class="row">
+        <div class="col-md-6">
+          <app-sorteos></app-sorteos>
+        </div>
+        <div class="col-md-6">
+          <app-disponibilidad></app-disponibilidad>
+        </div>
+      </div>
+
+      <!-- Otros componentes -->
+      <app-header></app-header>
+      <app-dashboard></app-dashboard>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

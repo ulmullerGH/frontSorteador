@@ -8,6 +8,10 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './shared/nav/nav.component';
+import { SolicitudesComponent } from './widgets/solicitudes/solicitudes.component';
+import { SorteosComponent } from './widgets/sorteos/sorteos.component';
+import { ReemplazosComponent } from './widgets/reemplazos/reemplazos.component';
+import { DisponibilidadComponent } from './widgets/disponibilidad/disponibilidad.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { NavComponent } from './shared/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    SolicitudesComponent,
+    SorteosComponent,
+    ReemplazosComponent,
+    DisponibilidadComponent
   ],
   imports: [
     BrowserModule,
