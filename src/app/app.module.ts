@@ -12,6 +12,7 @@ import { SolicitudesComponent } from './widgets/solicitudes/solicitudes.componen
 import { SorteosComponent } from './widgets/sorteos/sorteos.component';
 import { ReemplazosComponent } from './widgets/reemplazos/reemplazos.component';
 import { DisponibilidadComponent } from './widgets/disponibilidad/disponibilidad.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DisponibilidadComponent } from './widgets/disponibilidad/disponibilidad
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
