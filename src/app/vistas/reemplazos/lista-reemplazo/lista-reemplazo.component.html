@@ -1,0 +1,28 @@
+<h2>Reemplazos solicitados</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Solicitante</th>
+      <th>Fecha solicitud</th>
+      <th>Fecha Reemplazo</th>
+      <th>Reemplazo Propuesto</th>
+      <th>Estado</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reemplazo of reemplazos">
+      <td>{{ reemplazo.solicitante }}</td>
+      <td>{{ reemplazo.fechaSolicitud }}</td>
+      <td>{{ reemplazo.fechaReemplazo }}</td>
+      <td>{{ reemplazo.reemplazoPropuesto }}</td>
+      <td [ngClass]="getEstadoClass(reemplazo.estado)">
+        {{ reemplazo.estado }}
+      </td>
+      <td>
+        <button (click)="verDetalle(reemplazo.id)">Ver 🔎</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

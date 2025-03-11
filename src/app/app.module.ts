@@ -13,6 +13,8 @@ import { SorteosComponent } from './widgets/sorteos/sorteos.component';
 import { ReemplazosComponent } from './widgets/reemplazos/reemplazos.component';
 import { DisponibilidadComponent } from './widgets/disponibilidad/disponibilidad.component';
 import { FormsModule } from '@angular/forms';
+import { ListaReemplazoComponent } from './vistas/reemplazos/lista-reemplazo/lista-reemplazo.component';
+import { DetalleReemplazoComponent } from './vistas/reemplazos/detalle-reemplazo/detalle-reemplazo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     SolicitudesComponent,
     SorteosComponent,
     ReemplazosComponent,
-    DisponibilidadComponent
+    DisponibilidadComponent,
+    ListaReemplazoComponent,
+    DetalleReemplazoComponent
   ],
   imports: [
     BrowserModule,

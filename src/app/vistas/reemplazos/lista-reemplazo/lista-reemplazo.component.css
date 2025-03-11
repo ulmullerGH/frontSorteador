@@ -1,0 +1,42 @@
+table{
+  width: 60%;
+  border-collapse: collapse;
+  margin: 20px, auto;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #fdfdfd;
+  color: #0d3556;
+}
+tr:hover {
+  background-color: #ddd;
+}
+button{
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #9ba1a8;
+}
+
+/* Estado aprobado */
+.estado-aprobado {
+  color: #28A745;
+  font-weight: bold;
+}
+
+/* Estado rechazado */
+.estado-rechazado {
+  color: #F60004;
+  font-weight: bold;
+}
+
+/* Estado pendiente */
+.estado-pendiente {
+  color: #FFA500;
+  font-weight: bold;
+}
