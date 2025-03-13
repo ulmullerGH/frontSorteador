@@ -1,5 +1,5 @@
 <!-- Tabla de reemplazos -->
- <h2>Lista de reemplazos</h2>
+<h2>Lista de reemplazos pendientes</h2>
 <table border="1">
   <thead>
     <tr>
@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let reemplazo of reemplazos; trackBy: trackById">
+    <tr *ngFor="let reemplazo of reemplazos | filter: 'Pendiente'; trackBy: trackById">
       <td>{{ reemplazo.solicitante }}</td>
       <td>{{ reemplazo.fechaSolicitud }}</td>
       <td>{{ reemplazo.fechaReemplazo }}</td>

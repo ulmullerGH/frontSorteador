@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common'; // Importa CommonModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,8 @@ import { ReemplazosComponent } from './widgets/reemplazos/reemplazos.component';
 import { DisponibilidadComponent } from './widgets/disponibilidad/disponibilidad.component';
 import { FormsModule } from '@angular/forms';
 import { ListaReemplazoComponent } from './vistas/reemplazos/lista-reemplazo/lista-reemplazo.component';
-import { DetalleReemplazoComponent } from './vistas/reemplazos/detalle-reemplazo/detalle-reemplazo.component';
+import { ListaPendientesComponent } from './vistas/reemplazos/lista-pendientes/lista-pendientes.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { DetalleReemplazoComponent } from './vistas/reemplazos/detalle-reemplazo
     ReemplazosComponent,
     DisponibilidadComponent,
     ListaReemplazoComponent,
-    DetalleReemplazoComponent
+    ListaPendientesComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule // Asegúrate de agregar CommonModule aquí
   ],
   providers: [],
   bootstrap: [AppComponent]
