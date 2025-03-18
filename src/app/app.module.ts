@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { ListaReemplazoComponent } from './vistas/reemplazos/lista-reemplazo/lista-reemplazo.component';
 import { ListaPendientesComponent } from './vistas/reemplazos/lista-pendientes/lista-pendientes.component';
 import { FilterPipe } from './filter.pipe';
+import { MisAsignacionesComponent } from './widgets/mis-asignaciones/mis-asignaciones.component';
+import { ProximaAsignacionComponent } from './widgets/proxima-asignacion/proxima-asignacion.component';
+import { GestionReemplazosComponent } from './widgets/gestion-reemplazos/gestion-reemplazos.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { FilterPipe } from './filter.pipe';
     ListaReemplazoComponent,
     ListaPendientesComponent,
     FilterPipe,
+    MisAsignacionesComponent,
+    ProximaAsignacionComponent,
+    GestionReemplazosComponent,
   ],
   imports: [
     BrowserModule,
