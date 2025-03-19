@@ -76,6 +76,34 @@ export class ListaPendientesComponent {
         fechaDevolucion: '20/03/2024',
         categoria: 'SORTEO',
         grupo: 'GRUPO B'
+      },
+      {
+        id: 6,
+        solicitante: 'Laura Díaz',
+        fechaSolicitud: '12/03/2024',
+        fechaReemplazo: '17/03/2024',
+        reemplazoPropuesto: 'Jorge Ruiz',
+        estado: 'Pendiente',
+        rolSolicitante: 'Auxiliar',
+        motivo: 'Vacaciones',
+        rolReemplazo: 'Auxiliar',
+        fechaDevolucion: '19/03/2024',
+        categoria: 'ADMIN',
+        grupo: 'GRUPO A'
+      },
+      {
+        id: 7,
+        solicitante: 'Franco Díaz',
+        fechaSolicitud: '12/03/2024',
+        fechaReemplazo: '17/03/2024',
+        reemplazoPropuesto: 'Jorge Ruiz',
+        estado: 'Pendiente',
+        rolSolicitante: 'Auxiliar',
+        motivo: 'Vacaciones',
+        rolReemplazo: 'Auxiliar',
+        fechaDevolucion: '19/03/2024',
+        categoria: 'ADMIN',
+        grupo: 'GRUPO A'
       }
     ];
 

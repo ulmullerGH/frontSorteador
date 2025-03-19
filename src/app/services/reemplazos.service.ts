@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
-import { ReemplazosService } from 'src/app/services/reemplazos.service';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-@Component({
-  selector: 'app-lista-reemplazo',
-  templateUrl: './lista-reemplazo.component.html',
-  styleUrls: ['./lista-reemplazo.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class ListaReemplazoComponent {
+export class ReemplazosService {
 
-  // Pedir datos al service 
-  reemplazos = [
+  constructor() { }
+  private  reemplazos = [
     {
       id: 1,
       solicitante: 'Juan Pérez',
@@ -110,50 +108,27 @@ export class ListaReemplazoComponent {
     }
   ];
 
+  private totalReemplazosSubject = new BehaviorSubject<number>(this.reemplazos.length);
+  totalReemplazos$: Observable<number> = this.totalReemplazosSubject.asObservable();
 
-  selectedReemplazo: any = null; // Almacena el reemplazo seleccionado
-  isModalOpen = false; // Para abrir y cerrar el modal
+  private totalPendientesSubject = new BehaviorSubject<number>(this.getTotalPendientes());
+  totalPendientes$: Observable<number> = this.totalPendientesSubject.asObservable();
 
-  getEstadoClass(estado: string): string {
-    switch (estado.toLowerCase()) {
-      case 'aprobado':
-        return 'estado-aprobado';
-      case 'rechazado':
-        return 'estado-rechazado';
-      case 'pendiente':
-        return 'estado-pendiente';
-      case 'cancelado':
-        return 'estado-cancelado';
-      case 'confirmado':
-        return 'estado-confirmado';
-      default:
-        return '';
-    }
+  getReemplazos(): any[] {
+    return this.reemplazos;
   }
 
-  openModal(reemplazo: any): void {
-    this.selectedReemplazo = reemplazo; // Asigna el reemplazo seleccionado al modal
-    this.isModalOpen = true; // Abre el modal
+  getTotalReemplazos(): number {
+    return this.reemplazos.length;
   }
 
-  closeModal(): void {
-    this.isModalOpen = false; // Cierra el modal
-    this.selectedReemplazo = null; // Limpia el reemplazo seleccionado
+  getTotalPendientes(): number {
+    return this.reemplazos.filter(r => r.estado.toLowerCase() === 'pendiente').length;
   }
 
-  trackById(index: number, item: any): number {
-    return item.id;
+  actualizarTotal() {
+    this.totalReemplazosSubject.next(this.getTotalReemplazos());
+    this.totalPendientesSubject.next(this.getTotalPendientes());
   }
-
-  // Cambiar el estado del reemplazo
-  changeEstado(nuevoEstado: string): void {
-    if (this.selectedReemplazo) {
-      this.selectedReemplazo.estado = nuevoEstado; // Actualiza el estado
-    }
-    this.closeModal(); // Cierra el modal después de cambiar el estado
-  }
-
- getTotalRemplazos(): number {
-  return this.reemplazos.length;
- }
 }
+
